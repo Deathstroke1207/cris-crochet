@@ -1,2 +1,2 @@
 # cris-crochet
-pagina web de Cristina Gallardo
+pagina web de prendas a crochet
