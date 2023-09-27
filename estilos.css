@@ -46,9 +46,10 @@
 
 a {
     text-decoration: none;
+    color:rgb(255, 255, 255);
 }
 
-.menu li{
+.menu li {
     display: flex;
     flex: 1;
     margin-left: 5px;
@@ -57,24 +58,23 @@ a {
     list-style: none;
     display: inline-block;
     text-decoration: none;
-    color:rgb(255, 255, 255);
 }
 
-.menu a :hover {
+.menu li :hover {
     border-bottom: 4px solid ;
 }
 
 /*Tarjetas*/
 
 .container {
-    column-gap: 50px;
-    row-gap: 50px;
-    display: grid;
-    grid-template-columns: repeat(4,200px);
-    justify-content: start;
+    margin: 0 350px;
+    margin-top: 50px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-family: 'Oswald',sans-serif;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card{
@@ -127,6 +127,5 @@ a {
     margin-bottom: 2px;
     padding: 20px;
     color: black;
-    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
