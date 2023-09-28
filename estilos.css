@@ -9,7 +9,7 @@
 .agrupar{
     font-family: 'Oswald',sans-serif;
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23cc0cbc' fill-opacity='0.47' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0 , 0, 0.1)), url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23cc0cbc' fill-opacity='0.47' fill-rule='evenodd'/%3E%3C/svg%3E");
     width: 100%;
     margin: auto;
     
@@ -30,10 +30,12 @@
 
 
 .inicio{
+    display: block;
     z-index: 1;
     top: 0;
     position: sticky;
     background: #cc0cbc;
+    bottom: 60px;
 }
 
 .menu{
@@ -50,31 +52,62 @@ a {
 }
 
 .menu li {
-    display: flex;
     flex: 1;
     margin-left: 5px;
     padding: 10px;
     font-size:20px;
-    list-style: none;
     display: inline-block;
     text-decoration: none;
+}
+
+.menu #li2 {
+    padding-right: 0;
+}
+
+.down-icon {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
 }
 
 .menu li :hover {
     border-bottom: 4px solid ;
 }
 
+.menu .button-list:hover ~ .productos{
+    display: block;
+}
+
+.productos {
+    background: #cc0cbc;
+    height: 80px;
+    width: 210px;
+    margin-left: 270px;
+    display: none;
+    
+}
+
+.productos li {
+    padding: 10px;
+}
+
+.productos li :hover {
+    border-bottom: 2px solid ;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*----------------------------------------*/
+
 /*Tarjetas*/
 
 .container {
-    margin: 0 350px;
-    margin-top: 50px;
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    gap: 75px;
+    margin: 70px 310px;
 }
 
 .card{
@@ -83,13 +116,13 @@ a {
     border-radius: 6px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
     cursor: pointer;
     transition: all 400ms ease;
 }
 
 .card:hover{
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
     transform: translateY(-3%);
 }
 
