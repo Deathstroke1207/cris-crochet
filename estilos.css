@@ -14,7 +14,7 @@
     margin: auto;
     
 }
-
+/*-----------------------------------------*/
 /*Menu principal*/
 
 .inicio-btn {
@@ -107,9 +107,19 @@ li {
     list-style: none;
 }
 
-
 /*----------------------------------------*/
 
+/*subtitulo*/
+.subtitulo {
+    margin-left: 50px;
+    text-align: start;
+    font-size: 25px;
+}
+
+h2 {
+    color: #202020;
+}
+/*-----------------------------------------*/
 /*Tarjetas*/
 
 .container {
@@ -250,32 +260,15 @@ li {
 @media (max-width: 588px){
     .container {
         grid-template-columns: repeat(2, 200px);
-        margin: 70px 56px;
-    }
-}
-
-@media (max-width: 588px){
-    .container {
-        grid-template-columns: repeat(2, 200px);
         margin: 70px 74px;
         gap: 40px;
     }
 }
 
-@media (max-width: 556px){
-    .container {
-        grid-template-columns: repeat(1, 300px);
-        margin: 70px 128px;
-        gap: 40px;
-    }
-
-    .card {
-        height: 357px;
-        width: 300px;
-    }
-}
-
 @media (max-width: 484px){
+    .subtitulo {
+        font-size: 15px;
+    }
 
     .down-icon {
         display: none;
@@ -314,14 +307,25 @@ li {
         transform: translatex(-500px);
         transition: transform 0.5s ease-in-out;
     }
+    
+    .menu.mostrar {
+        transform: translatex(-20px);
+    }
 
     .inicio ul.menu li {
         padding: 20px;
         font-size: 14px;
     }
-
-    .menu.mostrar {
-        transform: translatex(-20px);
+    
+    .inicio-btn {
+        display: block;
+        color: #fff;
+        z-index: 4;
+        position: absolute;
+        cursor: pointer;
+        top: 15px;
+        right: 30px;
+        width: 40px;
     }
 
     hr {
@@ -344,20 +348,13 @@ li {
     .productos.show {
         transform: translatex(35px);
     }
-
-    .inicio-btn {
-        display: block;
-        color: #fff;
-        z-index: 4;
-        position: absolute;
-        cursor: pointer;
-        top: 15px;
-        right: 30px;
-        width: 40px;
-    }
 }
 
 @media (max-width: 436px){
+    .subtitulo {
+        margin-left: 30px;
+    }
+
     .container {
         grid-template-columns: repeat(1, 200px);
         margin: 70px 118px;
@@ -373,7 +370,7 @@ li {
 @media (max-width: 406px){
     .container {
         grid-template-columns: repeat(1, 200px);
-        margin: 70px 118px;
+        margin: 70px 103px;
         gap: 40px;
     }
 
@@ -384,6 +381,10 @@ li {
 }
 
 @media (max-width: 358px){
+    .subtitulo {
+        font-size: 13px;
+    }
+
     .container {
         grid-template-columns: repeat(1, 200px);
         margin: 70px 79px;
